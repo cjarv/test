@@ -93,7 +93,7 @@ def flatten_array(arr):
     return list
     """
     stripper = re.compile(r'[\D\W]+')
-    integer_list = [i for i in stripper.split(json.dumps(arr)) if len(i)]
+    integer_list = [int(i) for i in stripper.split(json.dumps(arr)) if len(i)]
     return integer_list
 
 
